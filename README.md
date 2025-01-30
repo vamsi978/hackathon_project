@@ -18,8 +18,6 @@ This project fetches **WETH/USDT** trades from:
 
 ## Project Structure
 
-hackathon_project/ ├── README.md ├── requirements.txt ├── data/ │ ├── cex_trades_binance_ETH_USDT-2024-01.parquet │ ├── uniswap_v2_jan2024.csv │ └── uniswap_v3_jan2024.csv ├── results/ │ └── average_costs.png ├── scripts/ │ ├── fetch_uniswap_v2.py │ ├── fetch_uniswap_v3.py │ ├── fetch_cowswap.py │ ├── analyze.py │ ├── plot_results.py │ └── run_all.sh └── ...
-
 
 1. **`data/`**: Contains your raw data files (Binance parquet, plus the CSV outputs from fetching Uniswap trades).  
 2. **`results/`**: Holds the final `average_costs.png` plot.  
@@ -33,3 +31,30 @@ hackathon_project/ ├── README.md ├── requirements.txt ├── data
 2. **Install dependencies** (Python 3.10 recommended):
    ```bash
    pip install -r requirements.txt
+
+conda create -n hackathon_py310 python=3.10
+conda activate hackathon_py310
+pip install -r requirements.txt
+
+# Fetch Uniswap v2 data (1-day range)
+python scripts/fetch_uniswap_v2.py
+
+# Fetch Uniswap v3 data (1-day range)
+python scripts/fetch_uniswap_v3.py
+
+# Optionally fetch Cowswap data (requires valid endpoint)
+python scripts/fetch_cowswap.py
+
+# Analyze and merge with Binance data
+python scripts/analyze.py
+
+# Plot final results
+python scripts/plot_results.py
+
+bash scripts/run_all.sh
+
+---
+
+**Explanation**:  
+- This README clarifies **every** step, notes the 1-day range usage, and mentions the missing Cowswap endpoint. After copying it into your `README.md`, readers should fully understand how to run your hackathon project.
+
