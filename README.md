@@ -10,9 +10,9 @@ This project fetches **WETH/USDT** trades from:
 
 …specifically for **a chosen date range** in January 2024, then compares each trade’s realized price to **Binance’s mid-price** for the same pair/time range. Finally, it produces a plot of **average cost vs. trade size** (one line per exchange).
 
-> **Note**: For demonstration, we used a **1-day** range in January 2024 (instead of the entire month) to keep the data more manageable and avoid extremely long fetch times. You can easily modify the scripts to fetch the full month or any other custom range.
+> **Note**: For demonstration, I used a **1-day** range in January 2024 (instead of the entire month) to keep the data more manageable and avoid extremely long fetch times. You can easily modify the scripts to fetch the full month or any other custom range.
 
-**Cowswap Endpoint Note**: We have not found a stable subgraph endpoint for Cowswap in January 2024. If a valid endpoint becomes available, you can update `fetch_cowswap.py` accordingly. Until then, our final chart shows only Uniswap v2 and Uniswap v3.
+**Cowswap Endpoint Note**: I have not found a stable subgraph endpoint for Cowswap in January 2024. If a valid endpoint becomes available, you can update `fetch_cowswap.py` accordingly. Until then, our final chart shows only Uniswap v2 and Uniswap v3.
 
 ---
 
@@ -55,6 +55,6 @@ bash scripts/run_all.sh
 
 ---
 
-**Explanation**:  
-- This README clarifies **every** step, notes the 1-day range usage, and mentions the missing Cowswap endpoint. After copying it into your `README.md`, readers should fully understand how to run your hackathon project.
+**Happy Hackathon**
+**Vamsi**
 
