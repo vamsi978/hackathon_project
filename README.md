@@ -55,6 +55,6 @@ bash scripts/run_all.sh
 
 ---
 
-**Happy Hackathon**
+
 **Vamsi**
 
